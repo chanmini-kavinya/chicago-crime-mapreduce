@@ -10,3 +10,6 @@ mkdir -p ./output
 hdfs dfs -cat $HDFS_OUTPUT_DIR/part-* > $LOCAL_OUTPUT_FILE
 
 echo "Fetched results from $HDFS_OUTPUT_DIR to $LOCAL_OUTPUT_FILE"
+
+# Run the interpretation script
+python3 src/interpret_results.py

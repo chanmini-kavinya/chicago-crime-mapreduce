@@ -2,7 +2,7 @@ from collections import defaultdict
 
 crime_data = defaultdict(lambda: defaultdict(int))
 
-with open("output.txt") as f:
+with open("output/output.txt") as f:
     for line in f:
         parts = line.strip().split('\t')
         if len(parts) != 3:
