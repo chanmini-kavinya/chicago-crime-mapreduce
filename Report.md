@@ -1,6 +1,7 @@
 # Chicago Crime Pattern Analytics with MapReduce  
 ## University of Ruhuna - Faculty of Engineering 
 ### Module Name: Cloud Computing (EC7205)  
+### Assignment 1
 ### Group Number: 55
 
 ---
@@ -38,20 +39,31 @@ This project uses the [Chicago Crimes - 90 Days (2024)](https://www.kaggle.com/d
   - `LOCATION`
 - **Reason for choice:** The dataset is sufficiently large, real-world, and complex, enabling meaningful crime analytics at scale.
 
+<div style="page-break-after: always;"></div>
+
 #### Example row
-
-| CASE#    | DATE  OF OCCURRENCE | BLOCK             | IUCR | PRIMARY DESCRIPTION | SECONDARY DESCRIPTION | LOCATION DESCRIPTION | ARREST | DOMESTIC | BEAT | WARD | FBI CD | X COORDINATE | Y COORDINATE | LATITUDE     | LONGITUDE     | LOCATION              |
-|----------|---------------------|-------------------|------|--------------------|----------------------|---------------------|--------|----------|------|------|--------|--------------|--------------|--------------|---------------|-----------------------|
-| JG497095 | 11/8/2023 20:50     | 025XX N KEDZIE BLVD| 810  | THEFT              | OVER $500            | STREET              | N      | N        | 1414 | 35   | 6      | 1154609      | 1916759      | 41.92740733  | -87.70729439 | (41.927407329, -87.70729439) |
-
 
 ---
 
-## 2. Implemented MapReduce Job
+| CASE#    | DATE OF OCCURRENCE | BLOCK               | IUCR | PRIMARY DESCRIPTION | SECONDARY DESCRIPTION | LOCATION DESCRIPTION | ARREST |
+|----------|--------------------|---------------------|------|--------------------|----------------------|---------------------|--------|
+| JG497095 | 11/8/2023 20:50    | 025XX N KEDZIE BLVD | 810  | THEFT              | OVER $500            | STREET              | N      |
+
+---
+
+| DOMESTIC | BEAT | WARD | FBI CD | X COORDINATE | Y COORDINATE | LATITUDE     | LONGITUDE     | LOCATION                    |
+|----------|------|------|--------|--------------|--------------|--------------|---------------|-----------------------------|
+| N        | 1414 | 35   | 6      | 1154609      | 1916759      | 41.92740733  | -87.70729439  | (41.927407329, -87.70729439) |
+
+</br>
+
+---
+
+## 2. MapReduce Job Implementation
 
 **Task Chosen:**  
 Analyze and summarize Chicago crime patterns by:
-- Counting the number of crimes per combination of "Primary Description" (crime category) and location.
+- Counting the number of crimes per combination of crime category and location.
 - Identifying the most common locations for each crime type.
 
 **MapReduce Approach:**
@@ -65,7 +77,7 @@ Analyze and summarize Chicago crime patterns by:
 
 - **Interpretation Script (`src/interpret_results.py`):**  
   Reads the reducer's output and:
-    - Computes and prints the total number of crimes per crime type (sorted by count).
+    - Computes and prints the total number of crimes per crime type.
     - For each crime type, identifies the top 3 locations where that crime most frequently occurs.
 
 **Example Output:**  
@@ -75,6 +87,8 @@ Analyze and summarize Chicago crime patterns by:
 This approach provides insights into which types of crimes are most frequent overall and where they are most likely to occur within Chicago.
 
 **Programming Language:** Python (for both mapper and reducer scripts).
+
+<div style="page-break-after: always;"></div>
 
 ---
 
@@ -101,15 +115,19 @@ This approach provides insights into which types of crimes are most frequent ove
 
   <br/>
   <b>Hadoop Configuration</b><br/>
-
-    All Hadoop configuration files used for this project are included in the [hadoop-config](https://github.com/chanmini-kavinya/chicago-crime-mapreduce/tree/master/hadoop-config) directory of this repository. 
-
+    
+    The Hadoop configuration files used for this project are available in the [hadoop-config](https://github.com/chanmini-kavinya/chicago-crime-mapreduce/tree/master/hadoop-config) 
+    directory of the original GitHub repository:
+    
   - [core-site.xml](https://github.com/chanmini-kavinya/chicago-crime-mapreduce/blob/master/hadoop-config/core-site.xml)
   - [hdfs-site.xml](https://github.com/chanmini-kavinya/chicago-crime-mapreduce/blob/master/hadoop-config/hdfs-site.xml)
   - [mapred-site.xml](https://github.com/chanmini-kavinya/chicago-crime-mapreduce/blob/master/hadoop-config/mapred-site.xml)
   - [yarn-site.xml](https://github.com/chanmini-kavinya/chicago-crime-mapreduce/blob/master/hadoop-config/yarn-site.xml) 
 
   <br/>
+
+  <div style="page-break-after: always;"></div>
+
   <b>SSH Configuration</b><br/>
   <img src="screenshots/ssh_configuration1.png" alt="SSH Configuration" width="800"/>
   <img src="screenshots/ssh_configuration2.png" alt="SSH Configuration" width="800"/>
@@ -119,7 +137,10 @@ This approach provides insights into which types of crimes are most frequent ove
   <b>Start Hadoop Services</b><br/>
   <img src="screenshots/start_hadoop_services.png" alt="Start Hadoop Services" width="800"/>
 
+<div style="page-break-after: always;"></div>
+
 ---
+
 ## 4. Test and Run on Real Data
 
 The MapReduce job was executed on the full Kaggle dataset (approximately one year of Chicago police reports).
@@ -173,6 +194,8 @@ The MapReduce job was executed on the full Kaggle dataset (approximately one yea
      2. APARTMENT                  5304 reports
      3. RESIDENCE                  3642 reports
   ```
+
+<div style="page-break-after: always;"></div>
 
 You can refer to the following files for the complete output and interpretation:
 - [Raw MapReduce Output (output.txt)](https://github.com/chanmini-kavinya/chicago-crime-mapreduce/blob/master/output/output.txt)
