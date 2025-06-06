@@ -6,13 +6,23 @@
 
 ---
 
-### Team Members
+## Team Members
 - EG/2020/3943 - Sundarasekara G.O.
 - EG/2020/3978 - Jayakody J.A.T.K.
 - EG/2020/4181 - Samaraweera S.A.D.C.K.
 ---
 
-## 1. Chosen Dataset
+## Table of Contents
+
+1. [Dataset](#1-chosen-dataset)
+2. [MapReduce Job Implementation](#2-mapreduce-job-implementation)
+3. [Environment Setup](#3-environment-setup)
+4. [Test and Run on Real Data](#4-test-and-run-on-real-data)
+5. [Result Interpretation](#5-result-interpretation)
+6. [Source Code](#6-source-code)
+---
+
+## 1. Dataset
 
 This project uses the [Chicago Crimes - 90 Days (2024)](https://www.kaggle.com/datasets/carolinaaaaaaa/chicago-crimes-90-days-2024) dataset from Kaggle, containing one year's worth of police reports, covering the period from **2023-05-05 to 2024-05-03**. The data contains detailed records of reported crimes in the city of Chicago over this time frame.
 
@@ -38,8 +48,6 @@ This project uses the [Chicago Crimes - 90 Days (2024)](https://www.kaggle.com/d
   - `LONGITUDE`
   - `LOCATION`
 - **Reason for choice:** The dataset is sufficiently large, real-world, and complex, enabling meaningful crime analytics at scale.
-
-<div style="page-break-after: always;"></div>
 
 #### Example row
 
@@ -104,16 +112,16 @@ This approach provides insights into which types of crimes are most frequent ove
   <br/>
   <b>Java Installation</b><br/>
   <img src="screenshots/java_installation.png" alt="Java Installation" width="800"/>
-
   <br/>
+
   <b>Hadoop Installation</b><br/>
   <img src="screenshots/hadoop_installation.png" alt="Hadoop Installation" width="800"/>
-
   <br/>
+
   <b>Environment Variables Configuration</b><br/>
   <img src="screenshots/environment_variables.png" alt="Environment Variables" width="800"/>
-
   <br/>
+
   <b>Hadoop Configuration</b><br/>
     
     The Hadoop configuration files used for this project are available in the [hadoop-config](https://github.com/chanmini-kavinya/chicago-crime-mapreduce/tree/master/hadoop-config) 
@@ -132,8 +140,8 @@ This approach provides insights into which types of crimes are most frequent ove
   <img src="screenshots/ssh_configuration1.png" alt="SSH Configuration" width="800"/>
   <img src="screenshots/ssh_configuration2.png" alt="SSH Configuration" width="800"/>
   <img src="screenshots/ssh_configuration3.png" alt="SSH Configuration" width="800"/>
-
   <br/>
+
   <b>Start Hadoop Services</b><br/>
   <img src="screenshots/start_hadoop_services.png" alt="Start Hadoop Services" width="800"/>
 
