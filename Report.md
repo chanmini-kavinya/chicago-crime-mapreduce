@@ -13,7 +13,7 @@
 
 ## 1. Chosen Dataset
 
-This project uses the [Chicago Crimes - 90 Days (2024)](https://www.kaggle.com/datasets/carolinaaaaaaa/chicago-crimes-90-days-2024) dataset from Kaggle, which has been expanded to include one year's worth of police reports, covering the period from **2023-05-05 to 2024-05-03**. The data contains detailed records of reported crimes in the city of Chicago over this time frame.
+This project uses the [Chicago Crimes - 90 Days (2024)](https://www.kaggle.com/datasets/carolinaaaaaaa/chicago-crimes-90-days-2024) dataset from Kaggle, containing one year's worth of police reports, covering the period from **2023-05-05 to 2024-05-03**. The data contains detailed records of reported crimes in the city of Chicago over this time frame.
 
 - **Time Period:** One year, from 2023-05-05 to 2024-05-03.
 - **Rows:** 258535 records.
