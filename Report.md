@@ -1,14 +1,14 @@
 # Chicago Crime Pattern Analytics with MapReduce  
 ## University of Ruhuna - Faculty of Engineering 
 ### Module Name: Cloud Computing (EC7205)  
-### Assignment Title: Large-Scale Data Analysis Using MapReduce
+### Group Number: 55
 
 ---
 
 ### Team Members
-- EG/2020/3943
-- EG/2020/3978
-- EG/2020/4181 Samaraweera S.A.D.C.K.
+- EG/2020/3943 - Sundarasekara G.O.
+- EG/2020/3978 - Jayakody J.A.T.K.
+- EG/2020/4181 - Samaraweera S.A.D.C.K.
 ---
 
 ## 1. Chosen Dataset
@@ -80,35 +80,103 @@ This approach provides insights into which types of crimes are most frequent ove
 
 ## 3. Environment Setup
 
-- **Platform:** Hadoop 3.4.1 (local single-node setup)
+- **Platform:** Hadoop 3.4.1 (pseudo-distributed setup)
 - **Java Version:** JDK 11
+- **Python Version:** Python 3.x (used for mapper, reducer, and result interpretation scripts)
 - **HDFS:** Configured for input/output storage.
-- **Scripts:** Bash scripts automate upload, execution, and result fetching.
+- **Scripts:** Bash scripts automate upload, execution, and result interpretation. 
+
 - **Evidence of installation:**  
-  ![Hadoop Installation Screenshot](screenshot_hadoop_installation.png)  
+  <br/>
+  <b>Java Installation</b><br/>
+  <img src="screenshots/java_installation.png" alt="Java Installation" width="800"/>
+
+  <br/>
+  <b>Hadoop Installation</b><br/>
+  <img src="screenshots/hadoop_installation.png" alt="Hadoop Installation" width="800"/>
+
+  <br/>
+  <b>Environment Variables Configuration</b><br/>
+  <img src="screenshots/environment_variables.png" alt="Environment Variables" width="800"/>
+
+  <br/>
+  <b>Hadoop Configuration</b><br/>
+
+    All Hadoop configuration files used for this project are included in the [hadoop-config](https://github.com/chanmini-kavinya/chicago-crime-mapreduce/tree/master/hadoop-config) directory of this repository. 
+
+  - [core-site.xml](https://github.com/chanmini-kavinya/chicago-crime-mapreduce/blob/master/hadoop-config/core-site.xml)
+  - [hdfs-site.xml](https://github.com/chanmini-kavinya/chicago-crime-mapreduce/blob/master/hadoop-config/hdfs-site.xml)
+  - [mapred-site.xml](https://github.com/chanmini-kavinya/chicago-crime-mapreduce/blob/master/hadoop-config/mapred-site.xml)
+  - [yarn-site.xml](https://github.com/chanmini-kavinya/chicago-crime-mapreduce/blob/master/hadoop-config/yarn-site.xml) 
+
+  <br/>
+  <b>SSH Configuration</b><br/>
+  <img src="screenshots/ssh_configuration1.png" alt="SSH Configuration" width="800"/>
+  <img src="screenshots/ssh_configuration2.png" alt="SSH Configuration" width="800"/>
+  <img src="screenshots/ssh_configuration3.png" alt="SSH Configuration" width="800"/>
+
+  <br/>
+  <b>Start Hadoop Services</b><br/>
+  <img src="screenshots/start_hadoop_services.png" alt="Start Hadoop Services" width="800"/>
 
 ---
-
 ## 4. Test and Run on Real Data
 
-- **Input:** Full Kaggle dataset (~1 year of Chicago police reports)
-- **Execution:**  
-  ```bash
-  bash scripts/upload_to_hdfs.sh
-  bash scripts/run_mapreduce.sh
-  bash scripts/fetch_and_interpret_results.sh
+The MapReduce job was executed on the full Kaggle dataset (approximately one year of Chicago police reports).
+
+- **Input:**  
+  Full Kaggle Chicago crime dataset ([Kaggle Dataset Link](https://www.kaggle.com/datasets/carolinaaaaaaa/chicago-crimes-90-days-2024)).
+
+- **Sample MapReduce Output ([output.txt](https://github.com/chanmini-kavinya/chicago-crime-mapreduce/blob/master/output/output.txt)):**
   ```
-- **Sample Output (from output/output.txt):**
-  ```
-  THEFT    14235
-  BATTERY   9911
-  CRIMINAL DAMAGE  6721
-  ASSAULT  3542
+  ARSON	ABANDONED BUILDING	6
+  ARSON	AIRPORT BUILDING NON-TERMINAL - NON-SECURE AREA	1
+  ARSON	ALLEY	54
+  ARSON	APARTMENT	78
+  ARSON	BAR OR TAVERN	2
+  ARSON	CHA APARTMENT	2
+  ARSON	CHA HALLWAY / STAIRWELL / ELEVATOR	1
+  ARSON	CHA PARKING LOT / GROUNDS	1
+  ARSON	CHURCH / SYNAGOGUE / PLACE OF WORSHIP	1
+  ARSON	COMMERCIAL / BUSINESS OFFICE	4
   ...
   ```
-- **Execution Log:**  
-  See `output/execution_log.txt` or attached screenshot(s).
 
+- **Sample Interpretation ([summary.txt](https://github.com/chanmini-kavinya/chicago-crime-mapreduce/blob/master/output/summary.txt)):**
+  ```
+  ==================================================
+  Total Crime Types (Sorted by Count)
+  ==================================================
+  THEFT                               57531 crimes
+  BATTERY                             44881 crimes
+  CRIMINAL DAMAGE                     29816 crimes
+  MOTOR VEHICLE THEFT                 26560 crimes
+  ASSAULT                             22992 crimes
+  ...
+
+  ==================================================
+  Top 3 Locations per Crime Type
+  ===================================================
+
+  🔹 THEFT (Top 3 Locations):
+     1. STREET                    15215 reports
+     2. APARTMENT                  7303 reports
+     3. SMALL RETAIL STORE         4968 reports
+
+  🔹 BATTERY (Top 3 Locations):
+     1. APARTMENT                 14779 reports
+     2. RESIDENCE                  6883 reports
+     3. STREET                     6575 reports
+
+  🔹 CRIMINAL DAMAGE (Top 3 Locations):
+     1. STREET                    12079 reports
+     2. APARTMENT                  5304 reports
+     3. RESIDENCE                  3642 reports
+  ```
+
+You can refer to the following files for the complete output and interpretation:
+- [Raw MapReduce Output (output.txt)](https://github.com/chanmini-kavinya/chicago-crime-mapreduce/blob/master/output/output.txt)
+- [Interpretation & Summary (summary.txt)](https://github.com/chanmini-kavinya/chicago-crime-mapreduce/blob/master/output/summary.txt)
 ---
 
 ## 5. Result Interpretation
@@ -116,10 +184,7 @@ This approach provides insights into which types of crimes are most frequent ove
 
 ---
 
-## 6. Documentation and Submission
+## 6. Source Code
 
-- **README.md:** Provided with clear setup and execution steps.
-- **Source Code:** See `src/` and `scripts/` directories.
-- **Dataset:** Kaggle dataset referenced; not redistributed due to licensing.
-- **Results & Logs:** Included in `output/` directory.
-- **Evidence:** Screenshots of Hadoop installation and job execution included.
+The full source code is available at:  
+[https://github.com/chanmini-kavinya/chicago-crime-mapreduce](https://github.com/chanmini-kavinya/chicago-crime-mapreduce)
