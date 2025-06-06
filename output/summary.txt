@@ -1,0 +1,191 @@
+==================================================
+Total Crime Types (Sorted by Count)
+==================================================
+THEFT                               57531 crimes
+BATTERY                             44881 crimes
+CRIMINAL DAMAGE                     29816 crimes
+MOTOR VEHICLE THEFT                 26560 crimes
+ASSAULT                             22992 crimes
+OTHER OFFENSE                       15988 crimes
+DECEPTIVE PRACTICE                  14227 crimes
+ROBBERY                             10975 crimes
+WEAPONS VIOLATION                    8415 crimes
+BURGLARY                             7341 crimes
+NARCOTICS                            5387 crimes
+CRIMINAL TRESPASS                    4674 crimes
+OFFENSE INVOLVING CHILDREN           1676 crimes
+CRIMINAL SEXUAL ASSAULT              1569 crimes
+SEX OFFENSE                          1314 crimes
+PUBLIC PEACE VIOLATION                875 crimes
+HOMICIDE                              605 crimes
+INTERFERENCE WITH PUBLIC OFFICER        589 crimes
+ARSON                                 510 crimes
+STALKING                              486 crimes
+CONCEALED CARRY LICENSE VIOLATION        194 crimes
+LIQUOR LAW VIOLATION                  194 crimes
+PROSTITUTION                          191 crimes
+INTIMIDATION                          184 crimes
+KIDNAPPING                            131 crimes
+OBSCENITY                              46 crimes
+GAMBLING                               18 crimes
+HUMAN TRAFFICKING                       8 crimes
+PUBLIC INDECENCY                        7 crimes
+NON-CRIMINAL                            3 crimes
+OTHER NARCOTIC VIOLATION                1 crimes
+
+==================================================
+Top 3 Locations per Crime Type
+==================================================
+
+🔹 THEFT (Top 3 Locations):
+   1. STREET                    15215 reports
+   2. APARTMENT                 7303 reports
+   3. SMALL RETAIL STORE        4968 reports
+
+🔹 BATTERY (Top 3 Locations):
+   1. APARTMENT                 14779 reports
+   2. RESIDENCE                 6883 reports
+   3. STREET                    6575 reports
+
+🔹 CRIMINAL DAMAGE (Top 3 Locations):
+   1. STREET                    12079 reports
+   2. APARTMENT                 5304 reports
+   3. RESIDENCE                 3642 reports
+
+🔹 MOTOR VEHICLE THEFT (Top 3 Locations):
+   1. STREET                    19686 reports
+   2. PARKING LOT / GARAGE (NON RESIDENTIAL) 2377 reports
+   3. VEHICLE NON-COMMERCIAL    677 reports
+
+🔹 ASSAULT (Top 3 Locations):
+   1. APARTMENT                 5734 reports
+   2. STREET                    4382 reports
+   3. RESIDENCE                 3059 reports
+
+🔹 OTHER OFFENSE (Top 3 Locations):
+   1. APARTMENT                 5184 reports
+   2. RESIDENCE                 4090 reports
+   3. STREET                    3386 reports
+
+🔹 DECEPTIVE PRACTICE (Top 3 Locations):
+   1. APARTMENT                 3976 reports
+   2. RESIDENCE                 3748 reports
+   3. STREET                    789 reports
+
+🔹 ROBBERY (Top 3 Locations):
+   1. STREET                    4262 reports
+   2. SIDEWALK                  2408 reports
+   3. ALLEY                     653 reports
+
+🔹 WEAPONS VIOLATION (Top 3 Locations):
+   1. STREET                    4402 reports
+   2. ALLEY                     1165 reports
+   3. SIDEWALK                  1028 reports
+
+🔹 BURGLARY (Top 3 Locations):
+   1. APARTMENT                 2449 reports
+   2. RESIDENCE                 1475 reports
+   3. RESIDENCE - GARAGE        863 reports
+
+🔹 NARCOTICS (Top 3 Locations):
+   1. STREET                    2196 reports
+   2. SIDEWALK                  1186 reports
+   3. ALLEY                     576 reports
+
+🔹 CRIMINAL TRESPASS (Top 3 Locations):
+   1. APARTMENT                 1046 reports
+   2. RESIDENCE                 661 reports
+   3. STREET                    417 reports
+
+🔹 OFFENSE INVOLVING CHILDREN (Top 3 Locations):
+   1. RESIDENCE                 704 reports
+   2. APARTMENT                 561 reports
+   3. STREET                    102 reports
+
+🔹 CRIMINAL SEXUAL ASSAULT (Top 3 Locations):
+   1. APARTMENT                 512 reports
+   2. RESIDENCE                 298 reports
+   3. HOSPITAL BUILDING / GROUNDS 180 reports
+
+🔹 SEX OFFENSE (Top 3 Locations):
+   1. APARTMENT                 354 reports
+   2. RESIDENCE                 295 reports
+   3. STREET                    92 reports
+
+🔹 PUBLIC PEACE VIOLATION (Top 3 Locations):
+   1. STREET                    282 reports
+   2. SIDEWALK                  116 reports
+   3. APARTMENT                 69 reports
+
+🔹 HOMICIDE (Top 3 Locations):
+   1. STREET                    330 reports
+   2. APARTMENT                 58 reports
+   3. ALLEY                     40 reports
+
+🔹 INTERFERENCE WITH PUBLIC OFFICER (Top 3 Locations):
+   1. STREET                    326 reports
+   2. SIDEWALK                  62 reports
+   3. ALLEY                     28 reports
+
+🔹 ARSON (Top 3 Locations):
+   1. STREET                    111 reports
+   2. APARTMENT                 78 reports
+   3. RESIDENCE                 77 reports
+
+🔹 STALKING (Top 3 Locations):
+   1. APARTMENT                 165 reports
+   2. RESIDENCE                 109 reports
+   3. STREET                    84 reports
+
+🔹 CONCEALED CARRY LICENSE VIOLATION (Top 3 Locations):
+   1. STREET                    75 reports
+   2. AIRPORT TERMINAL UPPER LEVEL - SECURE AREA 62 reports
+   3. PARK PROPERTY             15 reports
+
+🔹 LIQUOR LAW VIOLATION (Top 3 Locations):
+   1. TAVERN / LIQUOR STORE     62 reports
+   2. BAR OR TAVERN             50 reports
+   3. RESTAURANT                36 reports
+
+🔹 PROSTITUTION (Top 3 Locations):
+   1. STREET                    138 reports
+   2. SIDEWALK                  32 reports
+   3. COMMERCIAL / BUSINESS OFFICE 11 reports
+
+🔹 INTIMIDATION (Top 3 Locations):
+   1. APARTMENT                 73 reports
+   2. RESIDENCE                 51 reports
+   3. STREET                    12 reports
+
+🔹 KIDNAPPING (Top 3 Locations):
+   1. STREET                    38 reports
+   2. APARTMENT                 20 reports
+   3. RESIDENCE                 19 reports
+
+🔹 OBSCENITY (Top 3 Locations):
+   1. RESIDENCE                 21 reports
+   2. APARTMENT                 13 reports
+   3. COMMERCIAL / BUSINESS OFFICE 3 reports
+
+🔹 GAMBLING (Top 3 Locations):
+   1. SIDEWALK                  12 reports
+   2. STREET                    2 reports
+   3. ALLEY                     1 reports
+
+🔹 HUMAN TRAFFICKING (Top 3 Locations):
+   1. APARTMENT                 3 reports
+   2. OTHER (SPECIFY)           2 reports
+   3. HOSPITAL BUILDING / GROUNDS 1 reports
+
+🔹 PUBLIC INDECENCY (Top 3 Locations):
+   1. SMALL RETAIL STORE        2 reports
+   2. CTA STATION               1 reports
+   3. CTA TRAIN                 1 reports
+
+🔹 NON-CRIMINAL (Top 3 Locations):
+   1. POLICE FACILITY / VEHICLE PARKING LOT 1 reports
+   2. RESIDENCE                 1 reports
+   3. STREET                    1 reports
+
+🔹 OTHER NARCOTIC VIOLATION (Top 3 Locations):
+   1. PARKING LOT / GARAGE (NON RESIDENTIAL) 1 reports

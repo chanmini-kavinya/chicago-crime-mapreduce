@@ -16,17 +16,26 @@ sorted_crime_totals = sorted(
     reverse=True
 )
 
-print("=" * 50)
-print("Total Crime Types (Sorted by Count)")
-print("=" * 50)
+output_lines = []
+output_lines.append("=" * 50)
+output_lines.append("Total Crime Types (Sorted by Count)")
+output_lines.append("=" * 50)
 for crime_type, total in sorted_crime_totals:
-    print(f"{crime_type:<30} {total:>10} crimes")
+    output_lines.append(f"{crime_type:<30} {total:>10} crimes")
 
-print("\n" + "=" * 50)
-print("Top 3 Locations per Crime Type")
-print("=" * 50)
+output_lines.append("\n" + "=" * 50)
+output_lines.append("Top 3 Locations per Crime Type")
+output_lines.append("=" * 50)
 for crime_type, _ in sorted_crime_totals:
     sorted_locs = sorted(crime_data[crime_type].items(), key=lambda x: x[1], reverse=True)[:3]
-    print(f"\n🔹 {crime_type} (Top 3 Locations):")
+    output_lines.append(f"\n🔹 {crime_type} (Top 3 Locations):")
     for i, (loc, cnt) in enumerate(sorted_locs, 1):
-        print(f"   {i}. {loc:<25} {cnt} reports")
+        output_lines.append(f"   {i}. {loc:<25} {cnt} reports")
+
+# Write to summary file
+with open("output/summary.txt", "w") as out_f:
+    out_f.write("\n".join(output_lines))
+
+# Also print to console
+for line in output_lines:
+    print(line)
