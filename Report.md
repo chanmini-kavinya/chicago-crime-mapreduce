@@ -65,6 +65,8 @@ This project uses the [chicago crimes 2023-2024](https://www.kaggle.com/datasets
 
 </br>
 
+<div style="page-break-after: always;"></div>
+
 ---
 
 ## 2. MapReduce Job Implementation and Approach
@@ -222,8 +224,10 @@ The MapReduce job was executed on the full Kaggle dataset (approximately one yea
 You can refer to the following files for the complete output and interpretation:
 - [Raw MapReduce Output (output.txt)](https://github.com/chanmini-kavinya/chicago-crime-mapreduce/blob/master/output/output.txt)
 - [Interpretation & Summary (summary.txt)](https://github.com/chanmini-kavinya/chicago-crime-mapreduce/blob/master/output/summary.txt)
----
 
+<div style="page-break-after: always;"></div>
+
+---
 ## 5. Interpret the Result
 
 ### Result Summary
@@ -236,6 +240,9 @@ The output reveals that Streets, Apartments, and Residences are the most common 
 <img src="output/crime_type_proportion.png" width="500">
 
 This pie chart illustrates the overall distribution of crime types within the dataset. Theft is the most prevalent crime, accounting for 22.4% of total reports, followed by Battery (17.4%), Criminal Damage (11.6%), and Motor Vehicle Theft (10.3%). These top four categories alone represent over 60% of all reported incidents. The chart also includes less frequent crime types, such as Narcotics, Weapons Violations, and Burglary, each contributing a smaller proportion. This visualization provides a clear overview of crime trends and reported offenses in the city of Chicago during 2023–2024.
+
+
+<div style="page-break-after: always;"></div>
 
 ### Top 3 Locations per Crime Type
 
@@ -259,6 +266,9 @@ This bar chart presents the top three most common locations where each crime typ
   - Some location names are inconsistently labeled (e.g., "RESIDENCE" vs "APARTMENT").
   - Certain location fields may be missing, potentially skewing the "top 3 locations" per crime type.
   - These inconsistencies don't introduce inaccuracy in the code execution but reduce the interpretability and trustworthiness of raw insights.
+
+
+<div style="page-break-after: always;"></div>
 
 ### Suggestions for Expansion
 
