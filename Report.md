@@ -120,7 +120,7 @@ This approach provides insights into which types of crimes are most frequent ove
 - **Java Version:** JDK 11
 - **Python Version:** Python 3.x (used for mapper, reducer, and result interpretation scripts)
 - **HDFS:** Configured for input/output storage.
-- **Scripts:** Bash scripts automate upload, execution, and result interpretation. 
+- **Scripts:** Bash scripts are used to automate data upload to HDFS, run the MapReduce jobs, and process the results.
 
 - **Evidence of installation:**  
   <br/>
