@@ -125,7 +125,7 @@ This approach provides insights into which types of crimes are most frequent ove
   <b>Hadoop Configuration</b><br/>
     
     The Hadoop configuration files used for this project are available in the [hadoop-config](https://github.com/chanmini-kavinya/chicago-crime-mapreduce/tree/master/hadoop-config) 
-    directory of the original GitHub repository:
+    directory of the GitHub repository:
     
   - [core-site.xml](https://github.com/chanmini-kavinya/chicago-crime-mapreduce/blob/master/hadoop-config/core-site.xml)
   - [hdfs-site.xml](https://github.com/chanmini-kavinya/chicago-crime-mapreduce/blob/master/hadoop-config/hdfs-site.xml)
