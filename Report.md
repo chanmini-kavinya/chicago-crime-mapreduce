@@ -212,7 +212,13 @@ You can refer to the following files for the complete output and interpretation:
 
 ## 5. Result Interpretation
 
+### Crime Type Proportion
 
+<img src="output/crime_type_proportion.png" width="500">
+
+### Top 3 Locations per Crime Type
+
+<img src="output/summary_top3_locations_per_crime_type.png" width="800">
 ---
 
 ## 6. Source Code
