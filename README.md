@@ -31,32 +31,47 @@ chmod +x scripts/*.sh
 
 ## Steps to Run
 
-1. **Clone the repository**
+1. **Start Hadoop Services**  
+   Ensure Hadoop services are running before executing any job. Run:
+   ```bash
+   start-dfs.sh
+   start-yarn.sh
+   jps
+   ```
+   
+   You should see the following processes in the output of `jps`:
+   - NameNode  
+   - DataNode  
+   - ResourceManager  
+   - NodeManager  
+   - SecondaryNameNode
+
+2. **Clone the repository**
    ```bash
    git clone https://github.com/chanmini-kavinya/chicago-crime-mapreduce.git
    cd chicago-crime-mapreduce
    ```
 
-2. **Upload data to HDFS**
+3. **Upload data to HDFS**
    - Use the provided script to upload your input data to HDFS:
      ```bash
      bash scripts/upload_to_hdfs.sh
      ```
 
-3. **Run the MapReduce Job**
+4. **Run the MapReduce Job**
    - Execute the MapReduce job using:
      ```bash
      bash scripts/run_mapreduce.sh
      ```
    - This will use `src/mapper.py` and `src/reducer.py` for the Hadoop streaming job.
 
-4. **View MapReduce Output on HDFS (Optional)**
+5. **View MapReduce Output on HDFS (Optional)**
    - To quickly view the MapReduce output stored on HDFS:
      ```bash
      bash scripts/view_hdfs_output.sh
      ```
 
-5. **Interpret Results from HDFS**
+6. **Interpret Results from HDFS**
    - After the job completes, fetch the output to your local `output/` directory and interpret the results:
      ```bash
      bash scripts/interpret_results.sh
