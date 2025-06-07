@@ -18,7 +18,7 @@
 2. [MapReduce Job Implementation](#2-mapreduce-job-implementation)
 3. [Environment Setup](#3-environment-setup)
 4. [Test and Run on Real Data](#4-test-and-run-on-real-data)
-5. [Result Interpretation](#5-result-interpretation)
+5. [Result Interpretation](#5-Interpret-the-Result)
 6. [Source Code](#6-source-code)
 ---
 
