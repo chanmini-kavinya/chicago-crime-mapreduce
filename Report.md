@@ -107,7 +107,8 @@ Analyze and summarize Chicago crime patterns by:
 
 This approach provides insights into which types of crimes are most frequent overall and where they are most likely to occur within Chicago.
 
-**Programming Language:** Python (for both mapper and reducer scripts).
+**Programming Language:** 
+- Python (for both mapper and reducer scripts).
 
 <div style="page-break-after: always;"></div>
 
