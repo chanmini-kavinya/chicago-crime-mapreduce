@@ -75,11 +75,11 @@ Analyze and summarize Chicago crime patterns by:
 - Identifying the most common locations for each crime type.
 
 **Dataset Preparation:**
-- The original dataset was sourced from Kaggle and cleaned to retain only the relevant columns and mainly, two columns were used. 
+- The original dataset was used without modification. Two columns were primarily used for the analysis:
   - PRIMARY DESCRIPTION (Crime type)
   - LOCATION DESCRIPTION (Location where the crime occurred)
 
-- Then, the cleaned data was uploaded into HDFS (Hadoop Distributed File System) for distributed processing.
+- The dataset was then uploaded to HDFS (Hadoop Distributed File System) for distributed processing.
 
 **Execution Environment:**
 - The analysis was conducted on a pseudo-distributed Hadoop cluster, which simulates a multi-node environment on a single physical machine.
