@@ -30,23 +30,23 @@ This project uses the [chicago crimes 2023-2024](https://www.kaggle.com/datasets
 - **Rows:** 258535 records.
 - **Format:** CSV file with columns:
 
-  - `CASE#`
-  - `DATE  OF OCCURRENCE`
-  - `BLOCK`
-  - `IUCR`
-  - `PRIMARY DESCRIPTION`
-  - `SECONDARY DESCRIPTION`
-  - `LOCATION DESCRIPTION`
-  - `ARREST`
-  - `DOMESTIC`
-  - `BEAT`
-  - `WARD`
-  - `FBI CD`
-  - `X COORDINATE`
-  - `Y COORDINATE`
-  - `LATITUDE`
-  - `LONGITUDE`
-  - `LOCATION`
+  - `CASE#`: Unique identifier for the crime report
+  - `DATE OF OCCURRENCE`: Date and time when the incident took place
+  - `BLOCK`: Approximate address where the crime occurred
+  - `IUCR`: Illinois Uniform Crime Reporting code (crime classification)
+  - `PRIMARY DESCRIPTION`: Main category/type of the crime (e.g., THEFT, BATTERY)
+  - `SECONDARY DESCRIPTION`: More specific sub-type of the crime
+  - `LOCATION DESCRIPTION`: Type of location (e.g., STREET, APARTMENT)
+  - `ARREST`: Indicates if an arrest was made (Y/N)
+  - `DOMESTIC`: Indicates if the incident was domestic-related (Y/N)
+  - `BEAT`: Police beat where the crime occurred
+  - `WARD`: City council ward of the incident location
+  - `FBI CD`: FBI crime classification code
+  - `X COORDINATE`: X coordinate (projected map position, for mapping)
+  - `Y COORDINATE`: Y coordinate (projected map position, for mapping)
+  - `LATITUDE`: Latitude in decimal degrees
+  - `LONGITUDE`: Longitude in decimal degrees
+  - `LOCATION`: Combined latitude and longitude (tuple)
 - **Reason for choice:** The dataset is sufficiently large, real-world, and complex, enabling meaningful crime analytics at scale.
 
 #### Example row
