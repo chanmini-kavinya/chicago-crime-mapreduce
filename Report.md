@@ -210,15 +210,52 @@ You can refer to the following files for the complete output and interpretation:
 - [Interpretation & Summary (summary.txt)](https://github.com/chanmini-kavinya/chicago-crime-mapreduce/blob/master/output/summary.txt)
 ---
 
-## 5. Result Interpretation
+## 5. Interpret the Result
+
+### Result Summary
+
+The dataset included 258535 crime records. Initially, the total number of incidents for each crime type and location combination is found. Then , the most frequent types of crimes reported in Chicago, as well as the top locations where each crime most often occurred were identified. Theft was the most common crime type, followed by Battery and Criminal Damage. For each crime category, the top three locations were extracted and ranked by report count.
+The output reveals that Streets, Apartments, and Residences are the most common crime scenes across a wide range of offenses. For example, Theft incidents mostly happened on streets and in apartments, while Battery was frequently reported in apartments and residences.
 
 ### Crime Type Proportion
 
 <img src="output/crime_type_proportion.png" width="500">
 
+This pie chart illustrates the overall distribution of crime types within the dataset. Theft is the most prevalent crime, accounting for 22.4% of total reports, followed by Battery (17.4%), Criminal Damage (11.6%), and Motor Vehicle Theft (10.3%). These top four categories alone represent over 60% of all reported incidents. The chart also includes less frequent crime types, such as Narcotics, Weapons Violations, and Burglary, each contributing a smaller proportion. This visualization provides a clear overview of crime trends and reported offenses in the city of Chicago during 2023–2024.
+
 ### Top 3 Locations per Crime Type
 
 <img src="output/summary_top3_locations_per_crime_type.png" width="800">
+
+This bar chart presents the top three most common locations where each crime type occurs. It shows key location-based trends in criminal activity. For example, Theft and Criminal Damage most often happen on Streets and in Apartments, while Motor Vehicle Theft is frequently reported at Streets and Parking Garages. Crimes like Assault and Deceptive Practices also show high occurrences in Residences, Apartments and Streets. Each group of bars corresponds to a specific crime type, with stacked colors representing the top three locations.
+
+### Patterns and Insights
+- Several interesting patterns emerged from the analysis of the Chicago crime dataset
+- Theft was the most reported crime, with over 57,000 instances, followed by Battery and Criminal Damage, where these three types made up a significant portion of total crime reports.
+- Street, Apartment, and Residence emerge as the most common settings for the majority of crimes. This pattern suggests a strong correlation between densely populated or publicly accessible areas and crime frequency.
+- MOTOR VEHICLE THEFT incidents predominantly occur on STREETS and in PARKING LOTS, indicating the need for better surveillance in outdoor public areas.
+- Less frequent but serious crimes such as Homicide and Criminal Sexual Assault also occurred commonly in Apartments and Streets,  raising concerns about safety in both private and public environments.
+
+### Performance or Accuracy Observations
+
+- The MapReduce was successfully executed on a single-node Hadoop system.
+- While this setup was sufficient for processing the dataset, the performance can be improved more by using a multi-node Hadoop cluster for parallelism.
+- The term “accuracy” is not applicable for this dataset since we are not dealing with a predictive or classification model.
+- The output is the result of deterministic aggregation, i.e., counting crime types and their top locations. However, data quality issues can still affect result reliability:
+  - Some location names are inconsistently labeled (e.g., "RESIDENCE" vs "APARTMENT").
+  - Certain location fields may be missing, potentially skewing the "top 3 locations" per crime type.
+  - These inconsistencies don't introduce inaccuracy in the code execution but reduce the interpretability and trustworthiness of raw insights.
+
+### Suggestions for Expansion
+
+- Multi-node Deployment by running the job on a full Hadoop cluster to handle larger datasets and improve processing speed.
+- Future analysis can use temporal data (e.g., by year or season) to detect trends in crime frequency over time.
+- Geospatial Insights: Integrate latitude and longitude data to map hotspots visually.
+- Normalize similar location labels for better grouping (e.g., unify "RESIDENCE", "APARTMENT", "HOUSE").
+- Machine learning techniques like clustering or classification algorithms can be used to find the hidden relationships within data.
+
+
+### Approach
 
 ---
 
