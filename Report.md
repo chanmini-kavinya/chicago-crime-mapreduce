@@ -219,6 +219,7 @@ You can refer to the following files for the complete output and interpretation:
 ### Top 3 Locations per Crime Type
 
 <img src="output/summary_top3_locations_per_crime_type.png" width="800">
+
 ---
 
 ## 6. Source Code
