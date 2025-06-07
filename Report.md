@@ -256,6 +256,29 @@ This bar chart presents the top three most common locations where each crime typ
 
 
 ### Approach
+The analysis was conducted on a pseudo-distributed Hadoop cluster, which simulates a multi-node environment on a single physical machine.
+
+1. Dataset Preparation
+- The original dataset was sourced from Kaggle and cleaned to retain only the relevant columns and mainly, two columns were used. 
+  - PRIMARY DESCRIPTION (Crime type)
+  - LOCATION DESCRIPTION (Location where the crime occurred)
+
+- Then, the cleaned data was uploaded into HDFS (Hadoop Distributed File System) for distributed processing.
+
+2. Map Phase
+- During the map stage, each record was mapped to extract the crime Type and Location Description. The mapper emitted key-value pairs including the crime type and the location.
+
+3. Shuffle and Sort Phase
+- The Hadoop framework internally grouped all values by the composite key (CrimeType:Location) and sorted them before sending them to the reducers for aggregation.
+
+4. Reduce Phase
+- The reducer function summed up the values for each key, producing the total number of reports for every unique (CrimeType:Location) pair. After the reduction, a post-processing step grouped results by CrimeType and sorted locations by frequency to identify the top 3 most common locations for each crime category.
+
+5. Execution
+- The MapReduce job was executed on a pseudo-distributed single-node Hadoop cluster, which provided an environment similar to a full Hadoop deployment but within a single system.
+
+6. Result Formatting
+- A Python script (interpret_results.py) was used to parse the reducer output and generate a report showing each crime type and its top 3 associated locations based on the number of reports.
 
 ---
 
