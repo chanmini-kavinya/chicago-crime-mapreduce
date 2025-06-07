@@ -233,7 +233,7 @@ This bar chart presents the top three most common locations where each crime typ
 - Several interesting patterns emerged from the analysis of the Chicago crime dataset
 - Theft was the most reported crime, with over 57,000 instances, followed by Battery and Criminal Damage, where these three types made up a significant portion of total crime reports.
 - Street, Apartment, and Residence emerge as the most common settings for the majority of crimes. This pattern suggests a strong correlation between densely populated or publicly accessible areas and crime frequency.
-- MOTOR VEHICLE THEFT incidents predominantly occur on STREETS and in PARKING LOTS, indicating the need for better surveillance in outdoor public areas.
+- Motor Vehicle Theft incidents predominantly occur on Streets and in Parking Lots, indicating the need for better surveillance in outdoor public areas.
 - Less frequent but serious crimes such as Homicide and Criminal Sexual Assault also occurred commonly in Apartments and Streets,  raising concerns about safety in both private and public environments.
 
 ### Performance or Accuracy Observations
